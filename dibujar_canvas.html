@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Udenar</title>
+</head>
+<body>
+    <canvas id="textoPersonalizado" width="1000px", height="700px" style="border: 2px solid gray;"></canvas>
+
+    <script>
+        window.addEventListener('load', () => {
+            let canvasTextoPersonalizado = document.getElementById('textoPersonalizado');
+            let ctx = canvasTextoPersonalizado.getContext('2d');
+
+            ctx.font = '50px Impact';
+            ctx.fillText('UDENAR', 385, 80);
+
+            ctx.beginPath();
+            ctx.arc(220, 220, 100, 0, Math.PI * 2, true);
+            ctx.stroke(); 
+
+            ctx.beginPath();
+            ctx.fillStyle = 'green';
+            ctx.moveTo(200, 200);
+            ctx.arc(190, 200, 10, 0, Math.PI * 2);
+            ctx.fill(); 
+
+            ctx.beginPath();
+            ctx.fillStyle = 'green';
+            ctx.moveTo(260, 200);
+            ctx.arc(250, 200, 10, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.moveTo(270, 240);
+            ctx.arc(220, 240, 50, 0, Math.PI);
+            ctx.stroke(); 
+
+            ctx.beginPath();
+            ctx.moveTo(225,320);
+            ctx.lineTo(225,525);
+
+            ctx.moveTo(125,400);
+            ctx.lineTo(325,400);
+
+            ctx.moveTo(325,400);
+            ctx.lineTo(335,370);
+
+            ctx.moveTo(125,400);
+            ctx.lineTo(115,370);
+
+            ctx.moveTo(225,525);
+            ctx.lineTo(165,635);
+
+            ctx.moveTo(225,525);
+            ctx.lineTo(285, 635);
+            ctx.stroke(); 
+        });
+    </script>
+</body>
+</html>
